@@ -3,7 +3,7 @@ About the Author
 =================
 
 I'm Channith, a Django user and developer.
-មិនយល់ មុិចបានមិនកើត?
+
 My research interests are in ther areas of
 
 
