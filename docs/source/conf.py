@@ -136,6 +136,22 @@ latex_elements = {
     # Latex figure (float) alignment
     #
     # 'figure_align': 'htbp',
+    'preamble': '''
+    % Enable unicode and use Courier New to ensure the card suit
+    % characters that are part of the 'random' module examples
+    % appear properly in the PDF output.
+    \usepackage{fontspec}
+    \setmonofont{Courier New}
+    ''',
+
+    # disable font inclusion
+    'fontpkg': '',
+    'fontenc': '',
+
+    # Fix Unicode handling by disabling the defaults for a few items
+    # set by sphinx
+    'inputenc': '',
+    'utf8extra': '',
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
