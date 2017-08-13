@@ -122,7 +122,8 @@ htmlhelp_basename = 'ccna-khmerdoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
-latex_elements = {
+#latex_engine = 'xelatex'
+#latex_elements = {
     # The paper size ('letterpaper' or 'a4paper').
     #
     # 'papersize': 'letterpaper',
@@ -139,15 +140,15 @@ latex_elements = {
     #
     # 'figure_align': 'htbp',
 
-}
+#}
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
-latex_documents = [
-    (master_doc, 'ccna-khmer.tex', u'ccna-khmer Documentation',
-     u'Am Channith', 'manual'),
-]
+#latex_documents = [
+#    (master_doc, 'ccna-khmer.tex', u'ccna-khmer Documentation',
+#     u'Am Channith', 'manual'),
+#]
 
 
 # -- Options for manual page output ---------------------------------------
