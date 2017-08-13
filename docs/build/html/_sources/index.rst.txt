@@ -4,32 +4,23 @@
    contain the root `toctree` directive.
 
 
-Welcome to CCNA-vKhmer!
-===========================
+===============================
+សូមស្វាគមន៍មកកាន់ CCNA-vKhmer!
+===============================
 .. image:: /images/ccna-intro.png
 
+កម្មវត្ថុ
+========
 
-Another simple Header
-=======================
+CCNA-vKhmer ខ្ញុំបាទរៀបរាងឡើងដើម្បីជាឯកសារសំរាប់ពិគ្រោះយោបល់ ដោយមិនបានចាត់ជាឯកសារផ្លូវការសំរាប់ប្រើប្រាស់ឡើយ។ខ្ញុំសរសេរនៅទីនេះក៏ដើម្បីពង្រឹងសម្ថភាពនៃការបកស្រាយ កត់ចំនាំនូវអ្វីដែលខ្ញុំបានរៀនកន្លងមក ដើម្បីអោយចងចាំបានយូ និងងាយស្រួលក្នុងការរំលឹកឡើងវិញ។
 
-
-
-Here is some text explaining some very complicated stuff.::
-
-   print 'hello'
-   >> hello
-
-
-
-Guide
-^^^^^^
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   license
-   help
    about
+   networking_basic
+   help
 
 
 Indices and tables
