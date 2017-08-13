@@ -16,6 +16,7 @@
    :caption: Contents:
 
    about
+   basic
    help
 
 
