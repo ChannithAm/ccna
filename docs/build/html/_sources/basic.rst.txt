@@ -39,7 +39,34 @@ A computer network គឺជាប្រពន្ធ័នៃការតភ្�
 OSI model
 ----------
 
-OSI (Open Sysatems Interconnection) model ត្រូវបានបង្កើតឡើងដោយប្រពន្ធ័ស្តង់ដាអន្តរជាតិ (International Organization for Standardization: OSI)។
+ទំរង់ OSI (Open Sysatems Interconnection) model ត្រូវបានបង្កើតឡើងដោយអង្គការប្រពន្ធ័ស្តង់ដាអន្តរជាតិ (International Organization for Standardization: OSI)។ វាបង្កើតឡើងជាទំរង់មួយសំរាប់ពិពណ៏នាអំពីមុខងារនៃប្រពន្ធ័ទំនាក់ទំនង។
+
+ទំរង់OSIមាន៧ស្រទាប់(layer) ដោយស្រទាប់និយមួយៗមានមុខងារផ្សេងគ្នាទៅតាមដំនើរនៃទិន្ន័យចរនៅលើបណ្ដាញ។
+
+.. image:: /images/osi-model.jpg
+   :align: center
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 TCP/IP model
