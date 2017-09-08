@@ -5,7 +5,7 @@
 
 A computer network គឺក្រុមនៃកុំព្យូទ័រ ឫជាប្រពន្ធ័នៃការតភ្ជាប់device(ឧបករណ៍)រវាងគ្នាក្នុងគោល​បំណង​​បង្កើតទំនាក់ទំនង ឫក៏ចែកចាយresources(ធនធាន ដូចជា files, printer,...) និង សេវាកម្ម​(services) ដោយប្រើប្រាស់common standard​​​ (ស្តង់ដារួម) ហៅថា `protocol <https://www.computerhope.com/jargon/p/protocol.htm>`_។ ដើម្បីបង្កើត និងតភ្ជាប់បានជាបណ្ដាញកុំព្យូទ័រ យើងត្រូវការកុំព្យូទ័រ(clients and servers) និងឧបករណ៍ហេដ្ឋារ​ចនាសម្ពន្ធ​បណ្ដាញ។
 
-.. Note:: `Client` ជាផ្នែកមួយនៃកុំព្យូទ័រ(hardware or software)ដែលaccessសេវាកម្ម​ដែលអាច​ផ្ដល់ដោយserver។​ ចំនែក `Server`នៅលើកុំព្យូទ័រផ្សេងគ្នា (ឫក៏លើកុំព្យូទ័រតែមួយ) ដែល​client​​អាច​ចូល​ទៅប្រើប្រាស់សេវាកម្ម(aceess the service)តាមរបៀបnetwork។ (`ប្រភពនៅទីនេះ <https://en.wikipedia.org/wiki/Client_(computing)>`_)
+.. Note:: **Client** ជាផ្នែកមួយនៃកុំព្យូទ័រ(hardware or software)ដែលaccessសេវាកម្ម​ដែលអាច​ផ្ដល់ដោយserver។​ ចំនែក **server** នៅលើកុំព្យូទ័រផ្សេងគ្នា (ឫក៏លើកុំព្យូទ័រតែមួយ) ដែល​client​​អាច​ចូល​ទៅប្រើប្រាស់សេវាកម្ម(aceess the service)តាមរបៀបnetwork។ (`ប្រភពនៅទីនេះ <https://en.wikipedia.org/wiki/Client_(computing)>`_)
 
 .. figure:: /images/Client-server-model.png
      :align: center
