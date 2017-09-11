@@ -17,7 +17,7 @@ Client Operating Systems & Network Operating Systems
 Network Operating Systems -NOS(Server Operating Systems)
 =========================================================
 
-កុំព្យូទ័រ Network Server ផ្ដល់បណ្ដាសេវាកម្មរបស់វាដល់ក្រុមនៃឧបករណ៍Network Client។ ជាធម្មតាកុំព្យូទ័រserverជាប្រភេទដែលមានcomputing resourceច្រើនដូចជា Processors & Processing Power, Physical Memory (RAM), ទំហំផ្ទុកទិន្ន័យធំជាដើម បើប្រៀបទៅនឹង​កុំព្យូទ័រ​client។ ​ម៉ាសុីនកុំព្យូទ័រserverដំណើរការ​**Server Operating System** ហើយគេថែមទាំងហៅថា ​**Network Operating System (NOS)**​ផងដែរ ដែលជាធម្មតាមានលក្ខណៈ និងសមត្ថភាព​ដំណើរការ​ខ្ពស់​បើបើធៀបនឹងប្រព័ន្ធប្រតិបត្តិការរបស់កុំព្យូទ័រclient។ កុំព្យូទ័រServerអាចនឹងត្រូវបានដំឡើង​ដោយ​software​ពិសេស ដើម្បីមានមុខងារជាServer។ Softwareពិសេសអនុញ្ញាតអោយកុំព្យូទ័រserver​មានមុខងារ​ជាក់លាក់​ដូចជា Filer Server, Web Server, Mail Server, Directory Server -ល-។
+កុំព្យូទ័រ Network Server ផ្ដល់បណ្ដាសេវាកម្មរបស់វាដល់ក្រុមនៃឧបករណ៍Network Client។ ជាធម្មតាកុំព្យូទ័រserverជាប្រភេទដែលមានcomputing resourceច្រើនដូចជា Processors & Processing Power, Physical Memory (RAM), ទំហំផ្ទុកទិន្ន័យធំជាដើម បើប្រៀបទៅនឹង​កុំព្យូទ័រ​client។ ​ម៉ាសុីនកុំព្យូទ័រserverដំណើរការ ​Server Operating Systemហើយគេថែមទាំងហៅថា  ​Network Operating System (NOS) ផងដែរ ដែលជាធម្មតាមានលក្ខណៈ និងសមត្ថភាព​ដំណើរការ​ខ្ពស់​បើបើធៀបនឹងប្រព័ន្ធប្រតិបត្តិការរបស់កុំព្យូទ័រclient។ កុំព្យូទ័រServerអាចនឹងត្រូវបានដំឡើង​ដោយ​software​ពិសេស ដើម្បីមានមុខងារជាServer។ Softwareពិសេសអនុញ្ញាតអោយកុំព្យូទ័រserver​មានមុខងារ​ជាក់លាក់​ដូចជា Filer Server, Web Server, Mail Server, Directory Server -ល-។
 
 NOSមានសមត្ថភាពច្រើនជាងប្រពន្ធប្រតិបត្តិការclient workstation(or Desktop)ធម្មតា។
 
