@@ -17,6 +17,7 @@
 
    about
    basic/index
+   cabling/index
    tcpip
    help
 
