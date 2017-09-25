@@ -18,6 +18,7 @@
    about
    basic/index
    cabling/index
+   type-network/index
    tcpip
    help
 
