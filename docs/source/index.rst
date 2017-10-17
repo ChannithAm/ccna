@@ -19,6 +19,7 @@
    basic/index
    cabling/index
    type-network/index
+   cli
    tcpip
    help
 

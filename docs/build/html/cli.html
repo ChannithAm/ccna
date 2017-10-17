@@ -1,0 +1,263 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Command-Line Interface (CLI) &mdash; CCNA-vKhmer 1.0.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="author" title="About these documents"
+              href="about.html"/>
+    <link rel="top" title="CCNA-vKhmer 1.0.1 documentation" href="index.html"/>
+        <link rel="next" title="TCP/IP" href="tcpip.html"/>
+        <link rel="prev" title="ប្រភេទtopoបណ្ដាញ" href="type-network/2-topo-network.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> CCNA-vKhmer
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="about.html">About the Author</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic/index.html">Networking មូលដ្ឋាន</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cabling/index.html">មធ្យោបាយផ្សព្វផ្សាយ(Network Media)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="type-network/index.html">ប្រភេទNetwork &amp;topo</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Command-Line Interface (CLI)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#primary-command-mode">Primary Command Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#user-exec-mode">User EXEC​ mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#privileged-exec-mode">Privileged EXEC mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#global-configuration-mode">Global configuration mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#interface-configuration">Interface configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#subinterface-configuration">Subinterface configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tcpip.html">TCP/IP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Need Help</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">CCNA-vKhmer</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Command-Line Interface (CLI)</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/cli.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="command-line-interface-cli">
+<h1>Command-Line Interface (CLI)<a class="headerlink" href="#command-line-interface-cli" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#primary-command-mode" id="id1">Primary Command Mode</a></li>
+<li><a class="reference internal" href="#user-exec-mode" id="id2">User EXEC​ mode</a></li>
+<li><a class="reference internal" href="#privileged-exec-mode" id="id3">Privileged EXEC mode</a></li>
+<li><a class="reference internal" href="#global-configuration-mode" id="id4">Global configuration mode</a></li>
+<li><a class="reference internal" href="#interface-configuration" id="id5">Interface configuration</a></li>
+<li><a class="reference internal" href="#subinterface-configuration" id="id6">Subinterface configuration</a></li>
+</ul>
+</div>
+<p>Command-line interface (CLI) គឺជាinterfaceសំរាប់អ្នកប្រើប្រាស់ ក្នុងការconfiguring, monitoring​ ហើយនឹង​maintainingឧបករណ៍Cisco។ User interfaceនេះអនុញ្ញាតអោយអ្នកមានភាពងាយស្រួលក្នុងការអនុវត្តផ្ទាល់ និងប្រតិបត្តិការបញ្ជា Cisco IOS (execute Cisco IOS commands) មិនថាឡើយប្រើrouter console ឫ terminal ឫremote access នោះទេ។</p>
+<div class="section" id="primary-command-mode">
+<h2><a class="toc-backref" href="#id1">Primary Command Mode</a><a class="headerlink" href="#primary-command-mode" title="Permalink to this headline">¶</a></h2>
+<p>នៅក្នុងការconfigure ឧបករណ៍Cisco, Cisco IOS command-line interfaceត្រូវបានបែងចែកជាច្រើនប្រភេទ(command modes)។</p>
+</div>
+<div class="section" id="user-exec-mode">
+<h2><a class="toc-backref" href="#id2">User EXEC​ mode</a><a class="headerlink" href="#user-exec-mode" title="Permalink to this headline">¶</a></h2>
+<p>នៅពេលដែលអ្នកចាប់ផ្ដើមដំណើរការrouterដំបូង ជាធម្មតាគឺអ្នកចាប់ផ្ដើមដោយ <cite>user EXEC mode</cite> ។ នៅជាUser EXEC modeអនុញ្ញាតអោយអ្នកមានសិទ្ធត្រឹមតែmonitoring commandsមួយចំនួនតែប៉ុណ្ណោះ ហើយភាគច្រើនវាសំដៅទៅលើmode​ដែលមើលតែប៉ុណ្ណោះ(view-only mode)។</p>
+<p>Access Method: log in (user + password)</p>
+<p>Promt&gt;</p>
+<p>Exit Method: logout</p>
+</div>
+<div class="section" id="privileged-exec-mode">
+<h2><a class="toc-backref" href="#id3">Privileged EXEC mode</a><a class="headerlink" href="#privileged-exec-mode" title="Permalink to this headline">¶</a></h2>
+<p>Access Method: ពីuser EXEC modeប្រើcommand <cite>enable</cite></p>
+<p>Promt: Route#</p>
+<p>Exit Method: disable</p>
+</div>
+<div class="section" id="global-configuration-mode">
+<h2><a class="toc-backref" href="#id4">Global configuration mode</a><a class="headerlink" href="#global-configuration-mode" title="Permalink to this headline">¶</a></h2>
+<p>Access Method: configure terminal ពីprivileged EXEC command</p>
+<p>Promt: Router(config)#</p>
+<p>Exit Method: type <cite>end</cite> or Ctrl+Z</p>
+</div>
+<div class="section" id="interface-configuration">
+<h2><a class="toc-backref" href="#id5">Interface configuration</a><a class="headerlink" href="#interface-configuration" title="Permalink to this headline">¶</a></h2>
+<p>Access Method: ពីglobal configuration modeវាបញ្ចូល interface ជាមួយនឹងinterfaceជាក់លាក់ណាមួយ</p>
+<p>Promt: Router(config-if)</p>
+<p>Exit Method: type <cite>end</cite> or Ctrl+Z</p>
+</div>
+<div class="section" id="subinterface-configuration">
+<h2><a class="toc-backref" href="#id6">Subinterface configuration</a><a class="headerlink" href="#subinterface-configuration" title="Permalink to this headline">¶</a></h2>
+<p>Promt: Router(config-subif)#</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tcpip.html" class="btn btn-neutral float-right" title="TCP/IP" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="type-network/2-topo-network.html" class="btn btn-neutral" title="ប្រភេទtopoបណ្ដាញ" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Channith Am.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
