@@ -86,9 +86,11 @@ PAT ក៏ជាប្រភេទមួយនៃ**Dynamic NAT**ដែរ ដែ
 NAT Terms
 ---------
 * Inside local address -IP addressផ្ដល់ទៅhostនៅក្នុងinside network។ ជាទូទៅaddressនេះ មិនបានផ្ដល់ដោយ Internet Information Center (InterNIC) ឫservice provider។ Addressនេះជា RFC 1918 private address។
-* Inside global address - ជាIP addressសមស្របមួយ ដែលផ្ដល់ដោយInterNIC ឫservice provider ដែលដំណាងអោយមួយ ឫច្រើន
-inside local IP addresses ទៅកាន់outside world។
+
+* Inside global address - ជាIP addressសមស្របមួយ ដែលផ្ដល់ដោយInterNIC ឫservice provider ដែលដំណាងអោយមួយ ឫច្រើន inside local IP addresses ទៅកាន់outside world។
+
 * Outside local address - ជាIP addressនៃoutside host ដែលស្គាល់ជាhostsនៅឋិតនៅinside network។
+
 * Outside global address - ជាIP address ផ្ដល់ទៅhost នៅលើoutside network។ ម្ចាស់នៃhost ជាអ្នកផ្ដល់នូវaddressនេះ។
 
 .. image:: /images/nat-term.png
