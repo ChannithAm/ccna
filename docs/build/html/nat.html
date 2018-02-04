@@ -32,7 +32,9 @@
   
         <link rel="author" title="About these documents"
               href="about.html"/>
-    <link rel="top" title="CCNA-vKhmer 1.0.1 documentation" href="index.html"/> 
+    <link rel="top" title="CCNA-vKhmer 1.0.1 documentation" href="index.html"/>
+        <link rel="next" title="Need Help" href="help.html"/>
+        <link rel="prev" title="TCP/IP" href="tcpip.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -82,13 +84,20 @@
             
             
                 <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="about.html">About the Author</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basic/index.html">Networking មូលដ្ឋាន</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cabling/index.html">មធ្យោបាយផ្សព្វផ្សាយ(Network Media)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="type-network/index.html">ប្រភេទNetwork &amp;topo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cli.html">Command-Line Interface (CLI)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tcpip.html">TCP/IP</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Network Address Translation (NAT)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#static-nat">Static NAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dynamic-nat">Dynamic NAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pat-port-address-translation">PAT (Port Address Translation)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#nat-terms">NAT Terms</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="help.html">Need Help</a></li>
 </ul>
 
@@ -152,18 +161,8 @@
 Internet។&#8221;</p>
 <p><strong>ឧទាហរណ៍៖</strong> កុំព្យូទ័ររបស់អ្នក អ្នកបានផ្ដល់(assigned)​ private IP address: 10.0.0.9។ តាមពិតទៅ​address នេះមិនអាចដឹកនាំ(routed)ទៅកាន់អុីនធឺណេតបានទេ ប៉ុន្តែអ្នកនៅតែអាចដំណើរការនៅលើអុីធឺណេតបាន (ហេតុអ្វី?)។ នេះគឺដោយសារតែ modem (ឫrouter)
 របស់អ្នកបានបកប្រែ addressខាងលើនេះ (10.0.0.9) ទៅជាpublic IP address: 123.12.23.1 ជាដើម មុននឹងដឹកនាំទិន្ន័យរបស់អ្នកទៅកាន់
-អុីនធឺណេត។
-.. image:: /images/nat-ex.png</p>
-<blockquote>
-<div><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">align:</th><td class="field-body">center</td>
-</tr>
-</tbody>
-</table>
-</div></blockquote>
+អុីនធឺណេត។</p>
+<img alt="_images/nat-ex.png" class="align-center" src="_images/nat-ex.png" />
 <p>ពិតមែនហើយនៅពេលដែលrouterរបស់អ្នកទទួលបានការឆ្លើយតប(packet reply)ពីdestinedសំរាប់ 123.12.23.1 វានឹងបកប្រែត្រឡប់ទៅ
 private IP ដើមវិញមុននឹងបញ្ជូនpacketទៅកាន់អ្នក។</p>
 <p>មកដល់ត្រឹមនេះអ្នកអាចនឹងសួរថា៖ អ្នកមិនបានឃើញភាពខុសគ្នានៃការប្រើប្រាស់NAT ដើម្បីសន្សំសន្ចៃរាប់លានIP addressផង ពីព្រោះអ្នកនៅតែ
@@ -182,36 +181,16 @@ private IP ដើមវិញមុននឹងបញ្ជូនpacketទៅក
 <p>ដើម្បីដោះស្រាយបញ្ហាពីរខាងលើ នៅមានលក្ខណៈផ្សេងទៀតអាចប្រើបានគឺ <strong>NAT Overload</strong> ឫហៅម្យ៉ាងទៀត <strong>Port Address Translation (PAT)</strong>។</p>
 <p>PAT អាចអោយdevicesច្រើននៅក្នុងបណ្ដាញLAN (local area network) អាចផ្គូផ្គង(mapped)ទៅនឹងpublic IP addressតែមួយ នៅលើportផ្សេងៗគ្នា។ ដូច្នេះទើបគេហៅថា port address translation (PAT)។ នៅពេលដែលប្រើPAT routerរក្សាទុកលេខportនៅក្នុង
 <a href="#id1"><span class="problematic" id="id2">**</span></a>inside global**​ IP address ដើម្បីបែងចែកភាពខុសគ្នា(distinguish)រវាងការបកប្រែ(translations)។ នៅក្នុងឧទាហរណ៍ ខាងក្រោម
-នេះផ្ដល់public IP address 123.1.1.1 ដូចគ្នា ប៉ុន្តែជាមួយនឹងលេខport​ផ្សេងគ្នា(ពី 1000 - 1002)។
-.. image:: /images/pat-ex.png</p>
-<blockquote>
-<div><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">align:</th><td class="field-body">center</td>
-</tr>
-</tbody>
-</table>
-</div></blockquote>
+នេះផ្ដល់public IP address 123.1.1.1 ដូចគ្នា ប៉ុន្តែជាមួយនឹងលេខport​ផ្សេងគ្នា(ពី 1000 - 1002)។</p>
+<img alt="_images/pat-ex.png" class="align-center" src="_images/pat-ex.png" />
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Cisco ប្រើពាក្យ(term)ថា <strong>inside local</strong> សំរាប់ <strong>private IP address</strong> និង <a href="#id3"><span class="problematic" id="id4">**</span></a>inside global**សំរាប់public IP addressesជំនួសដោយrouter។</p>
 </div>
 <p>Outsdie host IP addressអាចត្រូវបានប្ដូរដោយNAT។ <strong>Outside global</strong> addressដំណាងអោយoutside hostជាមួយនឹងpublic IP addressដែលអាចប្រើសំរាប់ដឹកនាំ(routing)ទៅកាន់អុីធឺណែតpublic។</p>
 <p>ពាក្យចុងក្រោយ <strong>outside local</strong> address គឺជាprivate addressនៃ external devices​ សំដៅទៅលើdevicesនៅបណ្ដាញlocal network។ អ្នកអាចយល់`outside local` address ដូចទៅនឹង`inside local` address នៃexternal devciceដែលឋិតនៅផ្នែកផ្សេងទៀត
-អុីនធឺណែត(at the other end of Internet)។
-.. image:: /images/NAT_packet.png</p>
-<blockquote>
-<div><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">align:</th><td class="field-body">center</td>
-</tr>
-</tbody>
-</table>
-</div></blockquote>
+អុីនធឺណែត(at the other end of Internet)។</p>
+<img alt="_images/NAT_packet.png" class="align-center" src="_images/NAT_packet.png" />
 <p>ប្រហែជាអ្នកនឹងសួរថា តើportប៉ុន្មានដែឡយើងត្រូវប្រើសំរាប់IPនីមួយៗ? ដោយសារតែ​ port number fieldមាន 16-bits, PATអាចគាំទ្រ(support)ប្រហែល 2^16 ports។ ដែលអាចមានចំនួនច្រើនជាង**៦៤​ ០០០**ការតភ្ជាប់**public IP address**មួយ។</p>
 <p>មកដល់នេះយើងបានស្វែងយល់ជាច្រើនអំពី NAT translation។ ឥឡូវយើសង្ខេបមកវិញ NATមានពីរប្រភេទៈ dynamic &amp; static។</p>
 <div class="section" id="static-nat">
@@ -238,18 +217,8 @@ static NAT។ ប៉ុន្តែអ្នកត្រូវតែមានច
 </ul>
 <p>inside local IP addresses ទៅកាន់outside world។
 * Outside local address - ជាIP addressនៃoutside host ដែលស្គាល់ជាhostsនៅឋិតនៅinside network។
-* Outside global address - ជាIP address ផ្ដល់ទៅhost នៅលើoutside network។ ម្ចាស់នៃhost ជាអ្នកផ្ដល់នូវaddressនេះ។
-.. image:: /images/nat-term.png</p>
-<blockquote>
-<div><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">align:</th><td class="field-body">center</td>
-</tr>
-</tbody>
-</table>
-</div></blockquote>
+* Outside global address - ជាIP address ផ្ដល់ទៅhost នៅលើoutside network។ ម្ចាស់នៃhost ជាអ្នកផ្ដល់នូវaddressនេះ។</p>
+<img alt="_images/nat-term.png" class="align-center" src="_images/nat-term.png" />
 <p>អានថែមៈ
 <a class="reference external" href="http://packetlife.net/blog/2010/jan/7/understanding-nat-address-types/">http://packetlife.net/blog/2010/jan/7/understanding-nat-address-types/</a></p>
 </div>
@@ -259,6 +228,15 @@ static NAT។ ប៉ុន្តែអ្នកត្រូវតែមានច
            </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="help.html" class="btn btn-neutral float-right" title="Need Help" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="tcpip.html" class="btn btn-neutral" title="TCP/IP" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

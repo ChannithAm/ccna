@@ -17,6 +17,7 @@ Internet។"
 **ឧទាហរណ៍៖** កុំព្យូទ័ររបស់អ្នក អ្នកបានផ្ដល់(assigned)​ private IP address: 10.0.0.9។ តាមពិតទៅ​address នេះមិនអាចដឹកនាំ(routed)ទៅកាន់អុីនធឺណេតបានទេ ប៉ុន្តែអ្នកនៅតែអាចដំណើរការនៅលើអុីធឺណេតបាន (ហេតុអ្វី?)។ នេះគឺដោយសារតែ modem (ឫrouter)
 របស់អ្នកបានបកប្រែ addressខាងលើនេះ (10.0.0.9) ទៅជាpublic IP address: 123.12.23.1 ជាដើម មុននឹងដឹកនាំទិន្ន័យរបស់អ្នកទៅកាន់
 អុីនធឺណេត។
+
 .. image:: /images/nat-ex.png
    :align: center
 
@@ -46,6 +47,7 @@ private IP ដើមវិញមុននឹងបញ្ជូនpacketទៅក
 PAT អាចអោយdevicesច្រើននៅក្នុងបណ្ដាញLAN (local area network) អាចផ្គូផ្គង(mapped)ទៅនឹងpublic IP addressតែមួយ នៅលើportផ្សេងៗគ្នា។ ដូច្នេះទើបគេហៅថា port address translation (PAT)។ នៅពេលដែលប្រើPAT routerរក្សាទុកលេខportនៅក្នុង
 **inside global**​ IP address ដើម្បីបែងចែកភាពខុសគ្នា(distinguish)រវាងការបកប្រែ(translations)។ នៅក្នុងឧទាហរណ៍ ខាងក្រោម
 នេះផ្ដល់public IP address 123.1.1.1 ដូចគ្នា ប៉ុន្តែជាមួយនឹងលេខport​ផ្សេងគ្នា(ពី 1000 - 1002)។
+
 .. image:: /images/pat-ex.png
    :align: center
 
@@ -55,6 +57,7 @@ Outsdie host IP addressអាចត្រូវបានប្ដូរដោយ
 
 ពាក្យចុងក្រោយ **outside local** address គឺជាprivate addressនៃ external devices​ សំដៅទៅលើdevicesនៅបណ្ដាញlocal network។ អ្នកអាចយល់`outside local` address ដូចទៅនឹង`inside local` address នៃexternal devciceដែលឋិតនៅផ្នែកផ្សេងទៀត
 អុីនធឺណែត(at the other end of Internet)។
+
 .. image:: /images/NAT_packet.png
    :align: center
 
@@ -87,6 +90,7 @@ NAT Terms
 inside local IP addresses ទៅកាន់outside world។
 * Outside local address - ជាIP addressនៃoutside host ដែលស្គាល់ជាhostsនៅឋិតនៅinside network។
 * Outside global address - ជាIP address ផ្ដល់ទៅhost នៅលើoutside network។ ម្ចាស់នៃhost ជាអ្នកផ្ដល់នូវaddressនេះ។
+
 .. image:: /images/nat-term.png
    :align: center
 
