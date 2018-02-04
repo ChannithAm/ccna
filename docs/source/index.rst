@@ -21,6 +21,7 @@
    type-network/index
    cli
    tcpip
+   nat
    help
 
 
