@@ -13,6 +13,8 @@
 
   
   
+  
+  
 
   
 
@@ -32,6 +34,9 @@
   
         <link rel="author" title="About these documents"
               href="../about.html"/>
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="CCNA-vKhmer 1.0.1 documentation" href="../index.html"/>
         <link rel="up" title="ប្រភេទNetwork &amp;topo" href="index.html"/>
         <link rel="next" title="ប្រភេទtopoបណ្ដាញ" href="2-topo-network.html"/>
@@ -44,6 +49,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -84,13 +90,16 @@
           
             
             
-                <p class="caption"><span class="caption-text">Contents:</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../about.html">About the Author</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../basic/index.html">Networking មូលដ្ឋាន</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cabling/index.html">មធ្យោបាយផ្សព្វផ្សាយ(Network Media)</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">ប្រភេទNetwork &amp;topo</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="">ប្រភេទNetwork</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ប្រភេទNetwork</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#personal-area-network-pan">Personal Area Network (PAN)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#local-area-network-lan">Local Area Network (LAN)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#metropolitan-area-network-man">Metropolitan Area Network (MAN)</a></li>
@@ -101,7 +110,9 @@
 <li class="toctree-l2"><a class="reference internal" href="2-topo-network.html">ប្រភេទtopoបណ្ដាញ</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../tcpip.html">TCP/IP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cli.html">Command-Line Interface (CLI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/index.html">ទំរង់៧ថ្នាក់ OSI - TCP/IP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nat.html">Network Address Translation (NAT)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../help.html">Need Help</a></li>
 </ul>
 
@@ -115,8 +126,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">CCNA-vKhmer</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CCNA-vKhmer</a>
+        
       </nav>
 
 
@@ -125,25 +138,42 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="index.html">ប្រភេទNetwork &amp;topo</a> &raquo;</li>
-      
-    <li>ប្រភេទNetwork</li>
+        
+      <li>ប្រភេទNetwork</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/type-network/1-type-network.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/type-network/1-type-network.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -151,7 +181,7 @@
             
   <div class="section" id="network">
 <h1>ប្រភេទNetwork<a class="headerlink" href="#network" title="Permalink to this headline">¶</a></h1>
-<p>Network មានច្រើនប្រភេទផ្សេងៗគ្នា ដែលគេបែងចែកទៅតាមទំហំ/ប្រភេទនៃបណ្ដាញនោះ។ ចំណែកឯឈ្មោះវិញ នៅក្នុងភាសាអង់គ្លេសមានភាពស្រដៀងគ្នា (&#8212; area network)។ នៅក្នុងអត្ថបទនេះ យើងនឹកលើកយកមកបកស្រាយជូន​ប្រិយមិត្តអ្នកអានអោយបានយល់ផងដែរ។</p>
+<p>Network មានច្រើនប្រភេទផ្សេងៗគ្នា ដែលគេបែងចែកទៅតាមទំហំ/ប្រភេទនៃបណ្ដាញនោះ។ ចំណែកឯឈ្មោះវិញ នៅក្នុងភាសាអង់គ្លេសមានភាពស្រដៀងគ្នា (— area network)។ នៅក្នុងអត្ថបទនេះ យើងនឹកលើកយកមកបកស្រាយជូន​ប្រិយមិត្តអ្នកអានអោយបានយល់ផងដែរ។</p>
 <div class="contents local topic" id="contents">
 <ul class="simple">
 <li><a class="reference internal" href="#personal-area-network-pan" id="id2">Personal Area Network (PAN)</a></li>
@@ -208,15 +238,18 @@
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="2-topo-network.html" class="btn btn-neutral float-right" title="ប្រភេទtopoបណ្ដាញ" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="2-topo-network.html" class="btn btn-neutral float-right" title="ប្រភេទtopoបណ្ដាញ" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="ប្រភេទNetwork &amp;topo" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral" title="ប្រភេទNetwork &amp;topo" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -250,7 +283,8 @@
             VERSION:'1.0.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>

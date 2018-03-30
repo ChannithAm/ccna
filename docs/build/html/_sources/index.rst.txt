@@ -20,7 +20,7 @@
    cabling/index
    type-network/index
    cli
-   tcpip
+   osi/index
    nat
    help
 

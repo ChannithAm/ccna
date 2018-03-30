@@ -13,6 +13,8 @@
 
   
   
+  
+  
 
   
 
@@ -32,6 +34,9 @@
   
         <link rel="author" title="About these documents"
               href="../about.html"/>
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="CCNA-vKhmer 1.0.1 documentation" href="../index.html"/>
         <link rel="next" title="សេចក្ដីផ្ដើម" href="1-intro.html"/>
         <link rel="prev" title="About the Author" href="../about.html"/> 
@@ -43,6 +48,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -83,10 +89,13 @@
           
             
             
-                <p class="caption"><span class="caption-text">Contents:</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../about.html">About the Author</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Networking មូលដ្ឋាន</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Networking មូលដ្ឋាន</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="1-intro.html">សេចក្ដីផ្ដើម</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2-whatsnet.html">តើអ្វីទៅជា Network?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3-whyneed.html">ហេតុអ្វីបានជាត្រូវការបណ្ដាញកុំព្យូទ័រ?</a></li>
@@ -96,7 +105,9 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../cabling/index.html">មធ្យោបាយផ្សព្វផ្សាយ(Network Media)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../type-network/index.html">ប្រភេទNetwork &amp;topo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tcpip.html">TCP/IP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cli.html">Command-Line Interface (CLI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../osi/index.html">ទំរង់៧ថ្នាក់ OSI - TCP/IP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nat.html">Network Address Translation (NAT)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../help.html">Need Help</a></li>
 </ul>
 
@@ -110,8 +121,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">CCNA-vKhmer</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CCNA-vKhmer</a>
+        
       </nav>
 
 
@@ -120,23 +133,40 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
-    <li>Networking មូលដ្ឋាន</li>
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Networking មូលដ្ឋាន</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/basic/index.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/basic/index.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -161,15 +191,18 @@
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="1-intro.html" class="btn btn-neutral float-right" title="សេចក្ដីផ្ដើម" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="1-intro.html" class="btn btn-neutral float-right" title="សេចក្ដីផ្ដើម" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../about.html" class="btn btn-neutral" title="About the Author" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../about.html" class="btn btn-neutral" title="About the Author" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -203,7 +236,8 @@
             VERSION:'1.0.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>

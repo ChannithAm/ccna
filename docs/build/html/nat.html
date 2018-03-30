@@ -13,6 +13,8 @@
 
   
   
+  
+  
 
   
 
@@ -32,9 +34,12 @@
   
         <link rel="author" title="About these documents"
               href="about.html"/>
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="CCNA-vKhmer 1.0.1 documentation" href="index.html"/>
         <link rel="next" title="Need Help" href="help.html"/>
-        <link rel="prev" title="TCP/IP" href="tcpip.html"/> 
+        <link rel="prev" title="TCP/IP model" href="osi/2-TCP.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -43,6 +48,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -83,15 +89,18 @@
           
             
             
-                <p class="caption"><span class="caption-text">Contents:</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="about.html">About the Author</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basic/index.html">Networking មូលដ្ឋាន</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cabling/index.html">មធ្យោបាយផ្សព្វផ្សាយ(Network Media)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="type-network/index.html">ប្រភេទNetwork &amp;topo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cli.html">Command-Line Interface (CLI)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tcpip.html">TCP/IP</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Network Address Translation (NAT)</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="osi/index.html">ទំរង់៧ថ្នាក់ OSI - TCP/IP</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Network Address Translation (NAT)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#static-nat">Static NAT</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#dynamic-nat">Dynamic NAT</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pat-port-address-translation">PAT (Port Address Translation)</a></li>
@@ -111,8 +120,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">CCNA-vKhmer</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">CCNA-vKhmer</a>
+        
       </nav>
 
 
@@ -121,23 +132,40 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>Network Address Translation (NAT)</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Network Address Translation (NAT)</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="_sources/nat.txt" rel="nofollow"> View page source</a>
+            
+            <a href="_sources/nat.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -157,8 +185,8 @@
 ប្រសិនបើhostនិមួយៗនៅលើពិភពលោកនេះត្រូវការ public IP address មួយ នោះយើងគួតែមិនមានសល់IP address
 តាំងពីប៉ុន្មានឆ្នាំមុនមកម្លេះ។ ប៉ុន្តែដោយការប្រើ Network Address Translation (NAT) យើងអាចសន្សំសន្ចៃរាប់លានIP addresses
 សំរាប់ការប្រើប្រាស់ដល់បច្ចុប្បន្ន។</p>
-<p>&#8220;NAT អាចអោយhost ដែលមិនបានចុះបញ្ជីIP addressមួយដោយមានសុពលភាពត្រឹមត្រូវ អាចទំនាក់ទំនងជាមួយhostsផ្សេងៗទៀតនៅលើ
-Internet។&#8221;</p>
+<p>“NAT អាចអោយhost ដែលមិនបានចុះបញ្ជីIP addressមួយដោយមានសុពលភាពត្រឹមត្រូវ អាចទំនាក់ទំនងជាមួយhostsផ្សេងៗទៀតនៅលើ
+Internet។”</p>
 <p><strong>ឧទាហរណ៍៖</strong> កុំព្យូទ័ររបស់អ្នក អ្នកបានផ្ដល់(assigned)​ private IP address: 10.0.0.9។ តាមពិតទៅ​address នេះមិនអាចដឹកនាំ(routed)ទៅកាន់អុីនធឺណេតបានទេ ប៉ុន្តែអ្នកនៅតែអាចដំណើរការនៅលើអុីធឺណេតបាន (ហេតុអ្វី?)។ នេះគឺដោយសារតែ modem (ឫrouter)
 របស់អ្នកបានបកប្រែ addressខាងលើនេះ (10.0.0.9) ទៅជាpublic IP address: 123.12.23.1 ជាដើម មុននឹងដឹកនាំទិន្ន័យរបស់អ្នកទៅកាន់
 អុីនធឺណេត។</p>
@@ -172,7 +200,7 @@ private IP ដើមវិញមុននឹងបញ្ជូនpacketទៅក
 មួយ។ នៅទីនេះNATអាចជួយបាន!</p>
 <p>អ្នកអាចកំចំណាំបានដែរថា នៅភាពជាក់ស្ដែង មិនមែនរាល់បុគ្គលិករបស់អ្នកសុទ្ធតែប្រើប្រាស់អុីធឺណែតនៅពេលតែមួយនោះទេ។
 អាចនិយាយបានថា មានតែ៥០នាក់ប្រើប្រាស់អុីនធឺណេតដើម្បីអានកាសែតនៅពេលព្រឹក ៥០នាក់ផ្សេងទៀតប្រើអុីនធឺណែតនៅថ្ងៃត្រង់ដើម្បីឆែក
-អុីមែល...។ ដោយការប្រើប្រាស់NAT អ្នកអាចផ្ដល់៥០ public IP addresses ដោយdynamically ទៅអោយអ្នកត្រូវការអ្នកដែលពិតជាត្រូវការវា
+អុីមែល…។ ដោយការប្រើប្រាស់NAT អ្នកអាចផ្ដល់៥០ public IP addresses ដោយdynamically ទៅអោយអ្នកត្រូវការអ្នកដែលពិតជាត្រូវការវា
 នៅពេលនោះ។ នេះគេហៅថា <strong>dynamic NAT</strong>។</p>
 <p>ក៏ប៉ុន្តែដំណោះស្រាយ NAT ខាងលើមិនទាន់អាចដោះស្រាយបញ្ហាខាងលើបានទាំងស្រុងនៅឡើយទេ។ ព្រោះនៅថ្ងៃណាមួយនឹងមានច្រើនជាង
 ៥០នាក់ដែលចូលទៅកាន់វេបសាយនៅពេលព្រឹក។ នៅក្នុងករណីនេះ មានតែ៥០នាក់តែប៉ុណ្ណោះដែលអាចប្រើអុីនធឺណែត អ្នកផ្សេងទៀតត្រូវ
@@ -225,15 +253,18 @@ static NAT។ ប៉ុន្តែអ្នកត្រូវតែមានច
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="help.html" class="btn btn-neutral float-right" title="Need Help" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="help.html" class="btn btn-neutral float-right" title="Need Help" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="tcpip.html" class="btn btn-neutral" title="TCP/IP" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="osi/2-TCP.html" class="btn btn-neutral" title="TCP/IP model" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -267,7 +298,8 @@ static NAT។ ប៉ុន្តែអ្នកត្រូវតែមានច
             VERSION:'1.0.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="_static/jquery.js"></script>
